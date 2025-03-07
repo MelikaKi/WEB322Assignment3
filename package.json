@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "tw:build": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/main.css --watch",
-    "dev": "nodemon server.js"
+    "build": "npm run tw:build",
+    "tw:build": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/main.css",
+    "dev": "nodemon server.js",
+    "vercel-build": "npm run build"
   },
   "author": "Melika Kazemi",
   "license": "ISC",
