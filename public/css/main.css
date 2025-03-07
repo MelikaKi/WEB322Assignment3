@@ -1,0 +1,281 @@
+/* Base Fixtures */
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: initial;
+  --tw-pan-y: initial;
+  --tw-pinch-zoom: initial;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: initial;
+  --tw-gradient-via-position: initial;
+  --tw-gradient-to-position: initial;
+  --tw-ordinal: initial;
+  --tw-slashed-zero: initial;
+  --tw-numeric-figure: initial;
+  --tw-numeric-spacing: initial;
+  --tw-numeric-fraction: initial;
+  --tw-ring-inset: initial;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: initial;
+  --tw-brightness: initial;
+  --tw-contrast: initial;
+  --tw-grayscale: initial;
+  --tw-hue-rotate: initial;
+  --tw-invert: initial;
+  --tw-saturate: initial;
+  --tw-sepia: initial;
+  --tw-drop-shadow: initial;
+  --tw-backdrop-blur: initial;
+  --tw-backdrop-brightness: initial;
+  --tw-backdrop-contrast: initial;
+  --tw-backdrop-grayscale: initial;
+  --tw-backdrop-hue-rotate: initial;
+  --tw-backdrop-invert: initial;
+  --tw-backdrop-opacity: initial;
+  --tw-backdrop-saturate: initial;
+  --tw-backdrop-sepia: initial;
+  --tw-contain-size: initial;
+  --tw-contain-layout: initial;
+  --tw-contain-paint: initial;
+  --tw-contain-style: initial;
+}
+
+/* ::backdrop Pseudo-element */
+::backdrop {
+  all: inherit;
+}
+
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-tap-highlight-color: transparent;
+  background-color: #f3f4f6;
+}
+
+/* Reset Styles */
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, button, input, details, summary {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+/* Button Reset */
+button, [type='button'], [type='reset'], [type='submit'] {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Input & Textarea */
+input, textarea {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Navbar */
+nav {
+  padding: 1rem;
+  background-color: rgb(37 99 235);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar Links */
+nav a {
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav details ul {
+  position: absolute;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  z-index: 10;
+}
+
+nav details[open] summary {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e5e7eb;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: rgb(37 99 235);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s;
+  animation: button-pop 0.25s ease-out;
+}
+
+.btn:hover {
+  background-color: rgb(29 78 216);
+}
+
+/* Animation */
+@keyframes button-pop {
+  0% { transform: scale(0.98); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Utility Classes */
+.flex { display: flex; }
+.grid { display: grid; }
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.text-center { text-align: center; }
+.text-white { color: #ffffff; }
+.bg-gray-100 { background-color: #f3f4f6; }
+.bg-gray-200 { background-color: #e5e7eb; }
+.bg-blue-600 { background-color: rgb(37 99 235); }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.font-bold { font-weight: 700; }
+.rounded { border-radius: 0.25rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-10 { padding: 2.5rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.m-4 { margin: 1rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.justify-between { justify-content: space-between; }
+.gap-4 { gap: 1rem; }
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+/* Navbar Styles */
+nav {
+  padding: 1rem;
+  background-color: rgb(37 99 235); /* Blue */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Important for dropdown */
+}
+
+/* Details Dropdown */
+details {
+  position: relative;
+  display: inline-block;
+}
+
+details summary {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+details summary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown Menu */
+details[open] ul {
+  display: block;
+}
+
+details ul {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  min-width: 100px;
+  white-space: nowrap;
+}
+
+details ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+details ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #111827; /* Dark text */
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+details ul li a:hover {
+  background-color: #e5e7eb; /* Light gray on hover */
+  color: #2563eb; /* Blue */
+}

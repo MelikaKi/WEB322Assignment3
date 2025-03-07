@@ -1,0 +1,42 @@
+{
+  "name": "web322-assignment3",
+  "version": "1.0.0",
+  "description": "WEB322 Assignment 3: Dynamic landing page, about page, and custom 404 error page with Vercel deployment.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "tw:build": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/main.css --watch",
+    "dev": "nodemon server.js"
+  },
+  "author": "Melika Kazemi",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/node": "^5.1.12",
+    "@vercel/remix-builder": "^5.4.2",
+    "@vercel/static-build": "^2.7.4",
+    "body-parser": "^1.20.3",
+    "esbuild": "^0.25.0",
+    "express": "^4.21.2",
+    "glob": "^9.3.5",
+    "path-to-regexp": "^8.2.0",
+    "undici": "^7.4.0",
+    "vercel": "^41.3.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^5.0.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.11",
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "WEB322",
+    "Assignment3",
+    "Node.js",
+    "Express",
+    "Vercel",
+    "TailwindCSS",
+    "daisyUI"
+  ]
+}
