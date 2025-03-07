@@ -6,14 +6,16 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "server.js"
+      "source": "/(.*)",
+      "destination": "server.js"
     }
   ],
   "env": {
-    "PORT": "5001"
+    "PORT": "5001",
+    "NODE_ENV": "production",
+    "API_KEY": "your-api-key-here"
   },
   "buildCommand": "npm run vercel-build",
   "installCommand": "npm install",
