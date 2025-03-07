@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "npm run tw:build",
-    "tw:build": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/main.css",
+    "tw:build": "tailwindcss -i ./public/css/tailwind.css -o ./public/css/main.css",
     "dev": "nodemon server.js",
     "vercel-build": "npm run build"
   },
@@ -22,14 +22,14 @@
     "glob": "^9.3.5",
     "path-to-regexp": "^8.2.0",
     "undici": "^7.4.0",
-    "vercel": "^41.3.2"
+    "vercel": "^41.3.2",
+    "tailwindcss": "^4.0.11"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.20",
     "daisyui": "^5.0.0",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.11",
     "nodemon": "^3.0.1"
   },
   "keywords": [
