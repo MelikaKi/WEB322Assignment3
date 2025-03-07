@@ -19,15 +19,16 @@ const path = require("path");
 const projectData = require("./modules/projects");
 
 const app = express();
-const PORT = process.env.PORT || 5001;
 
 const studentName = "Melika Kazemi";
 const studentId = "166429233";
 
+// Middleware
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Routes
 app.get("/", (req, res) => 
     res.sendFile(path.join(__dirname, "views", "home.html"))
 );
@@ -115,6 +116,7 @@ app.post("/post-request", (req, res) => {
     });
 });
 
+// Custom 404 Page
 app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, "views", "404.html"), {
         headers: {
@@ -123,11 +125,15 @@ app.use((req, res) => {
     });
 });
 
+// Initialize Project Data
 projectData.initialize()
     .then(() => {
-        app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+        console.log("Project data initialized successfully.");
     })
     .catch(err => {
         console.error(`Failed to initialize project data: ${err}`);
         process.exit(1);
     });
+
+// Export the app for Vercel
+module.exports = app;
